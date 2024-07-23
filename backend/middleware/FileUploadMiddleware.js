@@ -33,7 +33,6 @@ const upload = multer({
 
 // Define a middleware function to handle file uploads
 const uploadMiddleware = (req, res, next) => {
-    console.log(req.body)
     upload.any()(req, res, function (err) {
       if (err instanceof multer.MulterError) {
         // A Multer error occurred during file upload
